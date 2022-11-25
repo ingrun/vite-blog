@@ -1,6 +1,6 @@
 import { readdirSync } from 'fs';
 
-let base_dir = './blog/'
+let base_dir = './src/'
 
 export function getFileName(dir){
   return readdirSync(base_dir.concat(dir));
