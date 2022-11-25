@@ -20,7 +20,13 @@ module.exports = {
   // 主题配置
   themeConfig: {
     siteTitle: 'ingrun',
-    lastUpdatedText: 'Updated Date',
+    lastUpdatedText: '最后更新时间',
+
+    outlineTitle: '本页目录',
+    docFooter: {
+      prev: '前一篇',
+      next: '下一篇'
+    },
 
     // 导航栏配置
     nav: [
