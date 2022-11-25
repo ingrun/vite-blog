@@ -6,7 +6,6 @@ export function getFileName(dir){
   return readdirSync(base_dir.concat(dir));
 }
 
-
 export function folderLoader( dir ){
   let list = []
 

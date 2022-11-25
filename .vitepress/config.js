@@ -8,7 +8,7 @@ module.exports = {
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]], // 添加网站图标
   outDir: './dist',
   srcDir: './src',
-  cleanUrls: 'with-subfolders',
+  // cleanUrls: 'with-subfolders',
   ignoreDeadLinks: true,
   lastUpdated: true,
 
@@ -36,7 +36,6 @@ module.exports = {
       { text: '关于作者', link: '' },
     ],
 
-
     //左侧导航栏配置
     sidebar: {
     '/web/': [
@@ -56,13 +55,8 @@ module.exports = {
     ],
     '/notes/': folderLoader('notes')
   }
-
   }
 }
-
-
-
-
 
 const i18n =  {
   search: '搜索',
