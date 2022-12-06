@@ -44,6 +44,7 @@ module.exports = {
         items: [
           { text: '常用CSS', link: '/web/css/常用css' },
           { text: 'Flex布局', link: '/web/css/flex' },
+          
         ]
       },
       {
@@ -51,7 +52,14 @@ module.exports = {
         items: [
           { text: '微信小程序登录逻辑', link: '/web/uniapp/微信小程序登录逻辑' },
         ]
+      },
+      {
+        text: 'vue',
+        items: [
+          { text: 'elementui在线引入图标库', link: '/web/vue/elementui在线引入图标库' },
+        ]
       }
+
     ],
     '/notes/': folderLoader('notes')
   }
