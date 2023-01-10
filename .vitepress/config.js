@@ -21,7 +21,6 @@ module.exports = {
   themeConfig: {
     siteTitle: 'ingrun',
     lastUpdatedText: '最后更新时间',
-
     outlineTitle: '本页目录',
     docFooter: {
       prev: '前一篇',
@@ -31,7 +30,7 @@ module.exports = {
     // 导航栏配置
     nav: [
       { text: '首页', link: '/' },
-      { text: '前端', link: '/web/css/常用css' },
+      { text: '前端', link: '/web/basics/常用css' },
       { text: '笔记', link: '/notes/2022-11-25' },
       { text: '关于作者', link: '' },
     ],
@@ -40,23 +39,26 @@ module.exports = {
     sidebar: {
     '/web/': [
       {
-        text: '基础',
+        text: 'WEB基础',
         items: [
-          { text: '常用CSS', link: '/web/css/常用css' },
-          { text: 'Flex布局', link: '/web/css/flex' },
-          
+          { text: '常用CSS', link: '/web/basics/常用css' },
+          { text: 'Flex布局', link: '/web/basics/flex' },
+          { text: 'JS的一些常用操作', link: '/web/basics/JS的一些常用操作' }
         ]
       },
       {
         text: 'uniapp',
         items: [
           { text: '微信小程序登录逻辑', link: '/web/uniapp/微信小程序登录逻辑' },
+          { text: 'uniapp swiper 选项卡实现高度自适应', link: '/web/uniapp/uniapp swiper 选项卡实现高度自适应' }
         ]
       },
       {
         text: 'vue',
         items: [
           { text: 'elementui在线引入图标库', link: '/web/vue/elementui在线引入图标库' },
+          { text: 'vue 监听键盘回车事件', link: '/web/vue/vue 监听键盘回车事件' },
+
         ]
       }
 
