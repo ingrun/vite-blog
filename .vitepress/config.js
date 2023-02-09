@@ -14,7 +14,8 @@ module.exports = {
 
   markdown: {
     theme: 'material-palenight',
-    lineNumbers: true
+    lineNumbers: true,
+
   },
 
   // 主题配置
@@ -43,7 +44,9 @@ module.exports = {
         items: [
           { text: '常用CSS', link: '/web/basics/常用css' },
           { text: 'Flex布局', link: '/web/basics/flex' },
-          { text: 'JS的一些常用操作', link: '/web/basics/JS的一些常用操作' }
+          { text: 'JS的一些常用操作', link: '/web/basics/JS的一些常用操作' },
+          { text: 'HTML画圆（太阳耀光效果）', link: '/web/basics/HTML画圆（太阳耀光效果）' }
+
         ]
       },
       {
