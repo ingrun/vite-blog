@@ -61,7 +61,7 @@ module.exports = {
         items: [
           { text: 'elementui在线引入图标库', link: '/web/vue/elementui在线引入图标库' },
           { text: 'vue 监听键盘回车事件', link: '/web/vue/vue 监听键盘回车事件' },
-
+          { text: 'irdict', link: '/web/vue/irdict' },
         ]
       }
 
