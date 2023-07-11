@@ -33,6 +33,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '前端', link: '/web/basics/常用css' },
       { text: '笔记', link: '/notes/2022-11-25' },
+      { text: 'other', link: '/other/linux/redis' },
       { text: '关于作者', link: '' },
     ],
 
@@ -66,7 +67,15 @@ module.exports = {
       }
 
     ],
-    '/notes/': folderLoader('notes')
+    '/notes/': folderLoader('notes'),
+    '/other/': [
+      {
+        text: 'linux',
+        items: [
+          { text: 'centos7 redis安装', link: '/other/linux/redis' },
+        ]
+      },
+    ]
   }
   }
 }
