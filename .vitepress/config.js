@@ -46,8 +46,8 @@ module.exports = {
           { text: '常用CSS', link: '/web/basics/常用css' },
           { text: 'Flex布局', link: '/web/basics/flex' },
           { text: 'JS的一些常用操作', link: '/web/basics/JS的一些常用操作' },
-          { text: 'HTML画圆（太阳耀光效果）', link: '/web/basics/HTML画圆（太阳耀光效果）' }
-
+          { text: 'HTML画圆（太阳耀光效果）', link: '/web/basics/HTML画圆（太阳耀光效果）' },
+          { text: '自定义事件监听管理器', link: '/web/basics/自定义事件监听管理器' }
         ]
       },
       {
