@@ -74,6 +74,8 @@ module.exports = {
         items: [
           { text: 'centos7 redis7安装', link: '/other/linux/redis' },
           { text: 'centos7 mysql8安装', link: '/other/linux/mysql' },
+          { text: 'centos7 Git安装', link: '/other/linux/git' },
+
         ]
       },
     ]
