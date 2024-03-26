@@ -1,9 +1,3 @@
-# irdict 工具
-响应式字典工具
-
-## 下载
-
- http://file.ingrun.cn/irdict.js 
 
 ## 配置
 ```js

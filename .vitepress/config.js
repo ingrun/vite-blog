@@ -32,6 +32,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '前端', link: '/web/basics/常用css' },
+      { text: '爪哇', link: '/java/spring gateway 打印日志' },
       { text: '笔记', link: '/notes/2022-11-25' },
       { text: 'other', link: '/other/linux/redis' },
       { text: '关于作者', link: '' },
@@ -75,8 +76,10 @@ module.exports = {
           { text: 'centos7 redis7安装', link: '/other/linux/redis' },
           { text: 'centos7 mysql8安装', link: '/other/linux/mysql' },
           { text: 'centos7 Git安装', link: '/other/linux/git' },
+          { text: 'centos7 nacos安装', link: '/other/linux/nacos安装' },
 
         ]
+
       },
     ]
   }
