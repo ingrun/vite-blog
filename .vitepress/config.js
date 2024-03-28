@@ -77,7 +77,8 @@ module.exports = {
           { text: 'centos7 mysql8安装', link: '/other/linux/mysql' },
           { text: 'centos7 Git安装', link: '/other/linux/git' },
           { text: 'centos7 nacos安装', link: '/other/linux/nacos安装' },
-
+          { text: 'nginx配置', link: '/other/linux/nginx配置' },
+          
         ]
 
       },
