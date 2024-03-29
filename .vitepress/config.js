@@ -71,6 +71,12 @@ module.exports = {
     '/notes/': folderLoader('notes'),
     '/other/': [
       {
+        text: 'other',
+        items: [
+          { text: '开发常用配置文件', link: '/other/开发常用配置文件' },         
+        ]
+      },
+      {
         text: 'linux',
         items: [
           { text: 'centos7 redis7安装', link: '/other/linux/redis' },
