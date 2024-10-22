@@ -91,6 +91,8 @@ module.exports = {
           text: "other",
           items: [
             { text: "开发常用配置文件", link: "/other/开发常用配置文件" },
+            { text: '烟花', link: '/other/烟花' }         
+
           ],
         },
         {
