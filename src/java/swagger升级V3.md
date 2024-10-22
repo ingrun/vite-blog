@@ -40,4 +40,4 @@ knife4j:
 
 ## 注解对应关系
 
-![1726730090796](C:\Users\123\AppData\Roaming\Typora\typora-user-images\1726730090796.png)
+![1726730090796](https://lingxiresource.oss-cn-shanghai.aliyuncs.com/share/1726730090796.png)
