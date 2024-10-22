@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,b as e}from"./app.98f23ab3.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"java/nacos\u5B89\u88C5.md","lastUpdated":1729590654000}'),l={name:"java/nacos\u5B89\u88C5.md"},p=e("",1),c=[p];function r(t,o,i,b,d,m){return n(),a("div",null,c)}const h=s(l,[["render",r]]);export{_ as __pageData,h as default};
