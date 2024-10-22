@@ -25,3 +25,14 @@ export function folderLoader( dir ){
   })
   return list
 }
+
+export function folderLoaderJava( dir ){
+  let list = []
+
+  getFileName(dir).forEach( e => {
+    list.push( 
+      { text: e.slice(0, -3), link: `/${dir}/${e.slice(0, -3)}` }
+    )
+  })
+  return list
+}
