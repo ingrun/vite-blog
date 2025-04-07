@@ -26,7 +26,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: com.fxszgs.zhfxlog.controller
+      packages-to-scan: com.test.testlog.controller
 # knife4j的增强配置，不需要增强可以不配
 knife4j:
   enable: true

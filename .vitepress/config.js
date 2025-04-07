@@ -32,9 +32,10 @@ module.exports = {
       { text: "首页", link: "/" },
       { text: "前端", link: "/web/basics/常用css" },
       { text: "爪哇", link: "/java/spring gateway 打印日志" },
+      { text: "linux", link: "/linux/yum安装redis" },
       { text: "笔记", link: "/notes/2022-11-25" },
-      { text: "other", link: "/other/linux/redis" },
-      { text: "关于作者", link: "" },
+      { text: "other", link: "/other/开发常用配置文件" },
+      // { text: "关于作者", link: "" },
     ],
 
     //左侧导航栏配置
@@ -86,25 +87,15 @@ module.exports = {
       ],
       "/notes/": folderLoader("notes"),
       "/java/": [{ text: "Java", items: folderLoaderJava("java") }],
+      "/linux/": [{ text: "Linux", items: folderLoaderJava("linux") }],
       "/other/": [
         {
           text: "other",
           items: [
             { text: "开发常用配置文件", link: "/other/开发常用配置文件" },
             { text: '烟花', link: '/other/烟花' }         
-
           ],
-        },
-        {
-          text: "linux",
-          items: [
-            { text: "centos7 redis7安装", link: "/other/linux/redis" },
-            { text: "centos7 mysql8安装", link: "/other/linux/mysql" },
-            { text: "centos7 Git安装", link: "/other/linux/git" },
-            { text: "centos7 nacos安装", link: "/other/linux/nacos安装" },
-            { text: "nginx配置", link: "/other/linux/nginx配置" },
-          ],
-        },
+        }
       ],
     },
   },
