@@ -1,0 +1,12 @@
+import{_ as s,c as a,o as n,d as e}from"./app.3fd56f67.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"java/nacos\u5B89\u88C5.md","lastUpdated":1749626587000}'),l={name:"java/nacos\u5B89\u88C5.md"},p=e(`<ol><li><p><a href="https://nacos.io/zh-cn/docs/quick-start.html" target="_blank" rel="noreferrer">https://nacos.io/zh-cn/docs/quick-start.html</a></p></li><li><p>\u4E0B\u8F7Dnacos \u5305 <a href="https://github.com/alibaba/nacos/releases" target="_blank" rel="noreferrer">https://github.com/alibaba/nacos/releases</a></p></li><li><p>\u89E3\u538B\u5B89\u88C5</p><div class="language-bash line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki"><code><span class="line"><span style="color:#A6ACCD;">mkdir /data/nacos</span></span>
+<span class="line"><span style="color:#82AAFF;">cd</span><span style="color:#A6ACCD;"> /data/nacos</span></span>
+<span class="line"><span style="color:#676E95;"># \u4E0A\u4F20\u6587\u4EF6</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">tar -zxvf ./nacos-server-2.4.0.1.tar.gz </span></span>
+<span class="line"><span style="color:#82AAFF;">cd</span><span style="color:#A6ACCD;"> nacos/bin</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></li><li><p>\u8FD0\u884C</p><div class="language-bash line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki"><code><span class="line"><span style="color:#676E95;"># \u5355\u673A\u6A21\u5F0F\u8FD0\u884C</span></span>
+<span class="line"><span style="color:#A6ACCD;">sh startup.sh -m standalone</span></span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li></ol>`,1),c=[p];function r(t,o,i,b,d,m){return n(),a("div",null,c)}const h=s(l,[["render",r]]);export{_ as __pageData,h as default};
