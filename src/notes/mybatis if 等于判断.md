@@ -1,0 +1,29 @@
+---
+title: mybatis if 等于判断
+date: 2022-12-08
+---
+
+## mybatis if 等于判断
+
+<p class="note-date">2022-12-08</p>
+
+
+做等于判断时需要加 `toString` 方法
+```xml
+<if test=" isLogin == '1'.toString() " >
+  is_login = #{isLogin}
+</if >
+```
+
+## mybatis if else
+mybaits 中没有else要用chose when otherwise 代替
+```xml
+<choose>
+    <when test="item.id != null and item.id !=''">
+        #{item.id,jdbcType=CHAR},
+    </when>
+    <otherwise>
+        '',
+    </otherwise>
+</choose>
+```

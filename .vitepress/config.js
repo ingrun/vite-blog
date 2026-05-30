@@ -1,23 +1,35 @@
 import { folderLoader, folderLoaderJava } from "../src/utils/fileUtils";
 
-module.exports = {
-  title: "ingrun", // 网站标题
-  description: "不吃花生", // 网站的描述
+export default {
+  title: "ingrun",
+  description: "不吃花生",
   lang: "zh-CN",
-  base: "/", //  部署时的路径 默认 / ，使用二级地址 /base/
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]], // 添加网站图标
+  base: "/",
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      "style",
+      {},
+      `.note-date{color:#aaa;font-size:0.85em;margin-bottom:1.5em;margin-top:-0.3em}
+:root{--vp-sidebar-width:360px}
+.VPSidebar .VPSidebarItem.level-1 .text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;max-width:100%}`,
+    ],
+    [
+      "script",
+      {},
+      `document.addEventListener('DOMContentLoaded',()=>{const o=new MutationObserver(()=>{document.querySelectorAll('.VPSidebar .level-1.is-link a.VPLink').forEach(a=>{a.title=a.textContent.trim()})});o.observe(document.body,{childList:!0,subtree:!0})})`,
+    ],
+  ],
   outDir: "./dist",
   srcDir: "./src",
-  // cleanUrls: 'with-subfolders',
   ignoreDeadLinks: true,
   lastUpdated: true,
 
   markdown: {
-    theme: "material-palenight",
+    theme: "material-theme-palenight",
     lineNumbers: true,
   },
 
-  // 主题配置
   themeConfig: {
     siteTitle: "ingrun",
     lastUpdatedText: "最后更新时间",
@@ -27,18 +39,20 @@ module.exports = {
       next: "下一篇",
     },
 
-    // 导航栏配置
+    // 搜索
+    search: {
+      provider: "local",
+    },
+
     nav: [
       { text: "首页", link: "/" },
       { text: "前端", link: "/web/basics/常用css" },
       { text: "爪哇", link: "/java/spring gateway 打印日志" },
       { text: "linux", link: "/linux/yum安装redis" },
-      { text: "笔记", link: "/notes/2022-11-25" },
+      { text: "笔记", link: "/notes/vitepress" },
       { text: "other", link: "/other/开发常用配置文件" },
-      // { text: "关于作者", link: "" },
     ],
 
-    //左侧导航栏配置
     sidebar: {
       "/web/": [
         {
@@ -93,44 +107,10 @@ module.exports = {
           text: "other",
           items: [
             { text: "开发常用配置文件", link: "/other/开发常用配置文件" },
-            { text: '烟花', link: '/other/烟花' }         
+            { text: "烟花", link: "/other/烟花" },
           ],
-        }
+        },
       ],
     },
   },
-};
-
-const i18n = {
-  search: "搜索",
-  menu: "菜单",
-  toc: "本页目录",
-  returnToTop: "返回顶部",
-  appearance: "外观",
-  previous: "前一篇",
-  next: "下一篇",
-  pageNotFound: "页面未找到",
-  deadLink: {
-    before: "你打开了一个不存在的链接：",
-    after: "。",
-  },
-  deadLinkReport: {
-    before: "不介意的话请提交到",
-    link: "这里",
-    after: "，我们会跟进修复。",
-  },
-  footerLicense: {
-    before: "",
-    after: "",
-  },
-  ariaAnnouner: {
-    before: "",
-    after: "已经加载完毕",
-  },
-  ariaDarkMode: "切换深色模式",
-  ariaSkipToContent: "直接跳到内容",
-  ariaToC: "当前页面的目录",
-  ariaMainNav: "主导航",
-  ariaMobileNav: "移动版导航",
-  ariaSidebarNav: "侧边栏导航",
 };

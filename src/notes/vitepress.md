@@ -1,0 +1,129 @@
+---
+title: vitepress
+date: 2022-11-25
+---
+
+# vitepress
+
+<p class="note-date">2022-11-25</p>
+
+
+[英文官网](https://vitepress.vuejs.org/)
+
+[简单搭建一个基于 VitePress 的静态文档网站](https://juejin.cn/post/7050465305620906015/)
+
+
+## 基本配置
+```js
+// config.js
+module.exports = {
+  title: 'ingrun', // 网站标题
+  description: '不吃花生', // 网站的描述
+  lang: 'zh-CN',
+  base: '/', //  部署时的路径 默认 / ，使用二级地址 /base/
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],// 添加网站图标
+  // 主题配置
+  themeConfig: {
+    // 导航栏配置
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '前端', link: '/web/css/常用css' },
+      { text: '笔记', link: '/notes/2022-11-25' },
+      { text: '关于作者', link: '' },
+    ],
+    
+    //左侧导航栏配置
+    sidebar: {
+    '/web/': [
+      {
+        text: '基础',
+        items: [
+          { text: '常用CSS', link: '/web/css/常用css' },
+          { text: 'Flex', link: '/web/css/flex' },
+        ]
+      },
+      {
+        text: 'uniapp',
+        items: [
+          { text: '微信小程序登录逻辑', link: '/web/uniapp/微信小程序登录逻辑' },
+        ]
+      }
+    ],
+    '/notes/': folderLoader('notes')
+  }
+ }
+}
+
+
+```
+
+
+## 配置部分操作按钮为中文
+
+```js
+themeConfig: {
+  // 默认 On this page
+  outlineTitle: '本页目录',
+
+  // 文档底部按钮 默认为英文
+  docFooter: {
+    prev: '前一篇',
+    next: '下一篇'
+  },
+}
+```
+
+
+## 页面添加最后更新时间
+
+```js
+module.exports = {
+  // 显示最后更新时间
+  lastUpdated: true,
+
+  themeConfig: {
+      // 最后更新时间前文字
+      lastUpdatedText: '最后更新时间',
+  }
+}
+```
+
+## 图标(Emoji)
+
+```
+:tada: :100: :ghost:
+```
+:tada: :100: :ghost:
+
+[全部表情列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json)
+
+## Markdown 主题样式
+
+[全部主题列表](https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes)
+```js
+export default {
+  markdown: {
+    theme: 'material-palenight',
+    // 是否显示行数
+    lineNumbers: true
+  }
+}
+```
+
+## 可以在`Markdown`中直接使用`VUE`语法
+
+[官方描述](https://vitepress.vuejs.org/guide/using-vue#using-vue-in-markdown)
+
+::: info 以下机翻
+在 VitePress 中，每个标记文件都被编译成 HTML，然后作为 Vue 单文件组件处理。这意味着您可以通过添加 < script > 标记来使用标记内的任何 Vue 特性，包括动态模板、使用 Vue 组件或任意页内 Vue 组件逻辑。
+
+了解 VitePress 利用 Vue 3的编译器自动检测和优化降价的纯静态部分也很重要。静态内容被优化为单个占位符节点，并从页面的 JavaScript 有效负载中消除。在客户端水化过程中也跳过了这些步骤。简而言之，您只需为任何给定页面上的动态部分付费。
+:::
+
+
+```html
+{{ 1 + 1 }}
+<div v-for="i in 3">{{ 'for: ' + i }}</div>
+```
+{{ 1 + 1 }}
+<div v-for="i in 3">{{ 'for: ' + i }}</div>
