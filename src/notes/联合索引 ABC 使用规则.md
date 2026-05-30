@@ -1,6 +1,7 @@
 ---
 title: 联合索引 (A, B, C) 使用规则
 date: 2026-05-30
+description: MySQL 联合索引的最左前缀原则、索引失效场景及 EXPLAIN 执行计划分析
 ---
 
 ### 联合索引 `(A, B, C)` 使用规则

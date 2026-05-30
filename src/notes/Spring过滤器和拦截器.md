@@ -1,6 +1,7 @@
 ---
 title: Spring 过滤器和拦截器
 date: 2026-05-30
+description: 深入理解 Spring Filter 与 Interceptor 的架构定位、执行顺序、核心区别及实战选型指南
 ---
 
 <p class="note-date">2026-05-30</p>

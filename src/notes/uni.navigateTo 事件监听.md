@@ -1,5 +1,6 @@
 ---
 title: uni.navigateTo 事件监听
+description: uni.navigateTo 事件监听 —— 2022-12-06
 date: 2022-12-06
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: mysql 修改最大连接数
+description: mysql 修改最大连接数 —— 2023-11-15
 date: 2023-11-15
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: mysql activity 流程版本变更
+description: mysql activity 流程版本变更 —— 2023-05-10
 date: 2023-05-10
 ---
 

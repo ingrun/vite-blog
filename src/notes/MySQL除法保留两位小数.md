@@ -1,5 +1,6 @@
 ---
 title: MySQL除法保留两位小数
+description: MySQL除法保留两位小数 —— 2023-07-19
 date: 2023-07-19
 ---
 

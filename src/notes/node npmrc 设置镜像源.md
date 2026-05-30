@@ -1,5 +1,6 @@
 ---
 title: node npmrc 设置镜像源
+description: node npmrc 设置镜像源 —— 2023-07-28
 date: 2023-07-28
 ---
 

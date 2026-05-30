@@ -1,5 +1,6 @@
 ---
 title: mysql插入转更新ON DUPLICATE KEY UPDATE
+description: mysql插入转更新ON DUPLICATE KEY UPDATE —— 2023-08-17
 date: 2023-08-17
 ---
 

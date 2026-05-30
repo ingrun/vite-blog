@@ -1,5 +1,6 @@
 ---
 title: MySQL ORDER BY 性能问题
+description: MySQL ORDER BY 不同排序方向的性能差异分析与优化实践
 date: 2026-05-30
 ---
 

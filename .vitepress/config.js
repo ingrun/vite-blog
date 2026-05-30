@@ -1,10 +1,25 @@
 import { folderLoader, folderLoaderJava } from "../src/utils/fileUtils";
+import { copyFileSync } from "fs";
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
 
 export default {
   title: "ingrun",
   description: "不吃花生",
   lang: "zh-CN",
   base: "/",
+
+  // 内置 sitemap 支持
+  sitemap: {
+    hostname: "https://blog.ingrun.cn",
+  },
+
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
     [
@@ -28,6 +43,57 @@ export default {
   markdown: {
     theme: "material-theme-palenight",
     lineNumbers: true,
+  },
+
+  // 构建时注入 per-page SEO 元数据
+  async transformHtml(code, id, context) {
+    const fm = context.pageData?.frontmatter || {};
+    const desc = fm.description || "不吃花生";
+    const url =
+      "https://blog.ingrun.cn/" +
+      context.page.replace(/\.md$/, ".html").replace(/^index\.html$/, "");
+    const title = fm.title || context.title || "ingrun";
+
+    // 1. 替换全局 description 为当前页面的
+    code = code.replace(
+      /<meta name="description" content="[^"]*">/,
+      `<meta name="description" content="${escapeHtml(desc)}">`,
+    );
+
+    // 2. 注入 Open Graph 标签
+    const ogTags = [
+      `<meta property="og:title" content="${escapeHtml(title)}">`,
+      `<meta property="og:description" content="${escapeHtml(desc)}">`,
+      `<meta property="og:url" content="${escapeHtml(url)}">`,
+      `<meta property="og:type" content="${fm.date ? "article" : "website"}">`,
+      `<meta property="og:site_name" content="ingrun">`,
+      `<meta name="twitter:card" content="summary">`,
+    ].join("\n    ");
+
+    // 3. 注入 JSON-LD 结构化数据（仅带 date 的文章页）
+    let jsonLd = "";
+    if (fm.date && fm.title) {
+      jsonLd = `<script type="application/ld+json">${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: fm.title,
+        description: desc,
+        datePublished: fm.date,
+        url: url,
+        author: { "@type": "Person", name: "ingrun" },
+      })}</script>`;
+    }
+
+    return code.replace(
+      "</head>",
+      `    ${ogTags}\n    ${jsonLd}\n  </head>`,
+    );
+  },
+
+  // 构建完成后复制 public 静态文件到 dist
+  async buildEnd() {
+    copyFileSync("public/robots.txt", "dist/robots.txt");
+    copyFileSync("public/favicon.ico", "dist/favicon.ico");
   },
 
   themeConfig: {
