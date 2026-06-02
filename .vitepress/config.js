@@ -41,7 +41,7 @@ export default {
   lastUpdated: true,
 
   markdown: {
-    theme: "material-theme-palenight",
+    theme: "one-dark-pro",
     lineNumbers: true,
   },
 
