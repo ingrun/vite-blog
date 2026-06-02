@@ -84,10 +84,7 @@ export default {
       })}</script>`;
     }
 
-    return code.replace(
-      "</head>",
-      `    ${ogTags}\n    ${jsonLd}\n  </head>`,
-    );
+    return code.replace("</head>", `    ${ogTags}\n    ${jsonLd}\n  </head>`);
   },
 
   // 构建完成后复制 public 静态文件到 dist
